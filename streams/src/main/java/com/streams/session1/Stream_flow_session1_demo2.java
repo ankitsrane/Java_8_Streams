@@ -42,9 +42,4 @@ public class Stream_flow_session1_demo2 {
         System.out.println("" + person.getName() + " Inside Map");
         return person.getName();
     }
-
-    private static String getPersonNameByPeekFilter(String name) {
-        System.out.println("Name inside  peek filter " + name);
-        return name;
-    }
 }
