@@ -5,20 +5,32 @@ public class Person {
     private int age;
     private Address address;
     private Gender gender;
+    private long salary;
 
     public enum Gender {
         MALE,
         FEMALE
     }
 
+
+    public long getSalary() {
+        return salary;
+    }
+
+    public void setSalary(long salary) {
+        this.salary = salary;
+    }
+
+
     public Person() {
     }
 
-    public Person(String name, int age, Gender gender, Address address) {
+    public Person(String name, int age, Gender gender, Address address, long salary) {
         this.name = name;
         this.age = age;
         this.gender = gender;
         this.address = address;
+        this.salary = salary;
     }
 
     public String getName() {
