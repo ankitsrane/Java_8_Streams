@@ -1,5 +1,6 @@
 package com.streams.session3;
 
+import com.streams.commonUtil.CommonUtility;
 import com.streams.pojos.Address;
 import com.streams.pojos.Person;
 
@@ -10,12 +11,7 @@ import java.util.stream.IntStream;
 
 public class NumericStreams_Example {
 
-    private static List<Person> personList = new ArrayList<Person>() {{
-        add(new Person("ankit", 27, Person.Gender.MALE, new Address("magarapatta", "411028", "pune"), 15000));
-        add(new Person("ganesh", 30, Person.Gender.MALE, new Address("random city", "randomcode", "banglore"), 20000));
-        add(new Person("kiran", 28, Person.Gender.MALE, new Address("Hadapsar", "411028", "pune"), 25000));
-        add(new Person("mayur", 23, Person.Gender.MALE, new Address("viman nagar", "411213", "pune"), 20000));
-    }};
+    private static List<Person> personList = CommonUtility.personList;
 
     private static long getSumOfPersonSalaries() {
         return personList.stream()

@@ -6,6 +6,17 @@ public class Person {
     private Address address;
     private Gender gender;
     private long salary;
+    private long uniqueId;
+
+    public long getUniqueId() {
+        return uniqueId;
+    }
+
+    public void setUniqueId(long uniqueId) {
+        this.uniqueId = uniqueId;
+    }
+
+
 
     public enum Gender {
         MALE,
@@ -25,7 +36,8 @@ public class Person {
     public Person() {
     }
 
-    public Person(String name, int age, Gender gender, Address address, long salary) {
+    public Person(long uniqueId, String name, int age, Gender gender, Address address, long salary) {
+        this.uniqueId = uniqueId;
         this.name = name;
         this.age = age;
         this.gender = gender;

@@ -1,5 +1,6 @@
 package com.streams.session1;
 
+import com.streams.commonUtil.CommonUtility;
 import com.streams.pojos.Address;
 import com.streams.pojos.Person;
 
@@ -12,15 +13,10 @@ import java.util.stream.Stream;
 
 
 public class Stream_session1 {
-    private static List<Person> personList = new ArrayList<Person>() {{
-        add(new Person("ankit", 27, Person.Gender.MALE, new Address("magarapatta", "411028", "pune")));
-        add(new Person("ganesh", 30, Person.Gender.MALE, new Address("random city", "randomcode", "banglore")));
-        add(new Person("kiran", 28, Person.Gender.MALE, new Address("Hadapsar", "411028", "pune")));
-        add(new Person("mayur", 23, Person.Gender.MALE, new Address("viman nagar", "411213", "pune")));
-    }};
+    private static List<Person> personList = CommonUtility.personList;
 
 
-    public static void main(String[] args) {
+        public static void main(String[] args) {
         System.out.println("Let's begin Streams");
         performLazyEvaluation();
     }
